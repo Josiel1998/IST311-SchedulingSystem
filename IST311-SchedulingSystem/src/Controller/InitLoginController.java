@@ -9,6 +9,7 @@ import Model.UserModel;
 import View.LoginGUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 /**
  *
@@ -38,7 +39,17 @@ public class InitLoginController implements ActionListener {
         System.out.println(username);
         System.out.println(password);
         
+        createUser(username, password);
+        
         return true;
+    }
+    
+    public void createUser(String username, String password){
+        //File myObj = new File("filename.txt");
+        
+        //Get relative path
+         String path = System.getProperty("user.dir");
+         System.out.println(path);
     }
     
     public void initViewComponents(LoginGUI view){

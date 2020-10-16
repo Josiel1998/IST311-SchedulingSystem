@@ -8,7 +8,6 @@ package ist311.schedulingsystem;
 import Controller.InitLoginController;
 import Model.UserModel;
 import View.LoginGUI;
-import View.LoginView;
 
 /**
  *

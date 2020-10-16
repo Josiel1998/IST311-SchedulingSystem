@@ -18,26 +18,22 @@ public class InitLoginController implements ActionListener {
     
     UserModel model;
     LoginGUI view;
+    InitLoginController ctlr;
    
     public InitLoginController(){}
     
     public InitLoginController(UserModel model, LoginGUI view){
         this.model = model;
         this.view = view;
-        
-        /*view.btn_login.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                System.out.println("Click Button");
-            }
-        });*/
+        ctlr = new InitLoginController();
         
         view.setVisible(true);
+        
+        initViewComponents(view);
+        
     }
     
     public boolean Authenticate(String username, String password){
-        
-        view.txt_username.setText(username);
-        view.txt_password.setText(password);
         
         System.out.println(username);
         System.out.println(password);
@@ -45,6 +41,15 @@ public class InitLoginController implements ActionListener {
         return true;
     }
     
+    public void initViewComponents(LoginGUI view){
+        
+        view.btn_login.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                ctlr.Authenticate(view.txt_username.getText(), view.txt_password.getText());
+            }
+        });
+    
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

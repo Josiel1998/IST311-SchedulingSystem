@@ -13,6 +13,8 @@ import Controller.InitLoginController;
  */
 public class LoginGUI extends javax.swing.JFrame {
     
+    InitLoginController obj;
+    
     public LoginGUI() {
         initComponents();
         
@@ -56,11 +58,6 @@ public class LoginGUI extends javax.swing.JFrame {
         jLabel3.setText("Scheduling System Login");
 
         btn_login.setText("Login");
-        btn_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loginActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,15 +114,6 @@ public class LoginGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_passwordActionPerformed
 
-    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
-        // TODO add your handling code here:
-        InitLoginController obj = new InitLoginController();
-        String username = this.txt_username.getText();
-        String password = this.txt_password.getText();
-        obj.Authenticate(username, password);
-        
-    }//GEN-LAST:event_btn_loginActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -162,11 +150,11 @@ public class LoginGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_login;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lbl_password;
-    private javax.swing.JLabel lbl_username;
-    private javax.swing.JTextField txt_password;
-    private javax.swing.JTextField txt_username;
+    public javax.swing.JButton btn_login;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel lbl_password;
+    public javax.swing.JLabel lbl_username;
+    public javax.swing.JTextField txt_password;
+    public javax.swing.JTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,6 +8,7 @@ package ist311.schedulingsystem;
 import Controller.InitLoginController;
 import Model.UserModel;
 import View.LoginGUI;
+import View.LoginView;
 
 /**
  *
@@ -20,6 +21,9 @@ public class IST311SchedulingSystem {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        LoginView view = new LoginView();
+        
         
         // Initialize View
         LoginGUI gui = new LoginGUI();

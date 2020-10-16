@@ -22,18 +22,14 @@ public class IST311SchedulingSystem {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        LoginView view = new LoginView();
-        
-        
         // Initialize View
         LoginGUI gui = new LoginGUI();
-        gui.setVisible(true);
         
         // Init Model
         UserModel model = new UserModel();
         
         // Init Controller
-        InitLoginController cntlr = new InitLoginController(model ,gui);
+        InitLoginController ctlr = new InitLoginController(model ,gui);
         
         
     }

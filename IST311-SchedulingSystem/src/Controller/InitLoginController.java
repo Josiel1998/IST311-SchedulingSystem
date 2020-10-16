@@ -22,9 +22,16 @@ public class InitLoginController implements ActionListener {
     public InitLoginController(){}
     
     public InitLoginController(UserModel model, LoginGUI view){
-        super();
-        model = this.model;
-        view = this.view;
+        this.model = model;
+        this.view = view;
+        
+        /*view.btn_login.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Click Button");
+            }
+        });*/
+        
+        view.setVisible(true);
     }
     
     public boolean Authenticate(String username, String password){
